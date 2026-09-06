@@ -11,8 +11,31 @@
 
 <!-- ===================== ANIMATED HEADER ===================== -->
 <a href="#">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:8A2BE2,50:FF1493,100:00E5FF&height=220&section=header&text=Ayush%20Tiwari&fontSize=60&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Full-Stack%20%C2%B7%20Mobile%20%C2%B7%20Product%20Builder&descAlignY=58&descSize=18" alt="header"/>
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:8A2BE2,50:FF1493,100:00E5FF&height=200&section=header&animation=fadeIn" alt="header"/>
 </a>
+
+<!-- ===================== DOT-MATRIX NAME PANEL ===================== -->
+<div align="center">
+
+```
+········································································
+···●●···●●··●●·●···●··●●●●··●●··●●···●●●●●●·●·●··●●··●●··●●···●●●●●··●●·
+···●●●···●··●··●···●●·●··●●·●●··●●·····●●··●●·●●·●●··●···●●···●●··●●·●●·
+··●●●●···●●●●··●···●●·●●●···●●··●●·····●●··●●·●●·●●●·●··●●●●··●●··●●·●●·
+··●●·●····●●···●···●●··●●●●·●●●●●●·····●●··●●·●●●●●●●●··●··●··●●●●●··●●·
+··●●●●●···●●···●···●●····●●·●●··●●·····●●··●●··●●●·●●●·●●●●●●·●●·●●··●●·
+·●●●●●●···●●···●●·●●··●··●●·●●··●●·····●●··●●··●●··●●··●●●●●●·●●··●●·●●·
+·●●···●●··●●···●●●●●··●●●●●·●●··●●·····●●···●··●●··●●··●····●·●●··●●·●●·
+········································································
+              ·●······●●●····●·········●●●●·····●···
+              ·●······●●●····●●········●●●●·····●●··
+              ·●·······●·●●··●●●●●●·●●····●●······●··   ( Atx3 )
+              ●●······●●·●●···●●··●●●●···●●●······●●·
+              ·●·····●●●●●●●··●···●●●···●··●●·····●··
+              ·●·····●●···●●··●●·●●●●●··●●●●●·····●··
+```
+
+</div>
 
 <!-- ===================== TYPING ANIMATION ===================== -->
 <div align="center">
@@ -32,6 +55,11 @@
 
 </div>
 
+<!-- ===================== FACE IN DOTS ===================== -->
+<!-- 🖼️  Send Ayush a face photo and this becomes a real dot-matrix portrait.
+     Generate with:  python tools/dotmatrix.py face me.jpg --cols 90
+     then paste the output between the ``` fences below. -->
+
 <!-- ===================== ABOUT ===================== -->
 ## <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="28"> About Me
 
@@ -39,7 +67,7 @@
 const ayush: Developer = {
   role:      "Full-Stack & Mobile Developer",
   location:  "India 🇮🇳",
-  building:  ["BrandEazy — B2B commerce app", "CRM systems", "AI-powered tools"],
+  building:  ["BrandEazy — B2C marketing e-commerce", "CRM systems", "AI-powered tools"],
   stack:     ["Flutter", "React", "Next.js", "Node.js", "Supabase"],
   learning:  ["System Design", "AI/LLM integration"],
   funFact:   "I ship faster than my code compiles ⚡",
