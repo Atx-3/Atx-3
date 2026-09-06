@@ -6,12 +6,10 @@
 
 <div align="center">
 
-<!-- ===================== TITLE ===================== -->
-# Ayush&nbsp;Tiwari
+<!-- ===================== COSMIC HERO (animated SVG) ===================== -->
+<img width="100%" src="https://raw.githubusercontent.com/Atx-3/Atx-3/main/assets/space-hero.svg" alt="Ayush Tiwari — cosmic banner"/>
 
-`Full-Stack · Mobile · Product Builder`
-
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=18&pause=1200&color=58A6FF&center=true&vCenter=true&width=520&height=40&lines=Building+BrandEazy+%E2%80%94+B2C+marketing+e-commerce;Flutter+%C2%B7+React+%C2%B7+Next.js+%C2%B7+Supabase;Designing+quietly.+Shipping+relentlessly.)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=18&pause=1200&color=58A6FF&center=true&vCenter=true&width=560&height=40&lines=Building+BrandEazy+%E2%80%94+B2C+marketing+e-commerce;Flutter+%C2%B7+React+%C2%B7+Next.js+%C2%B7+Supabase;Designing+quietly.+Shipping+relentlessly.)](https://git.io/typing-svg)
 
 <!-- ===================== SOCIAL ===================== -->
 [![Instagram](https://img.shields.io/badge/Instagram-0D1117?style=flat-square&logo=instagram&logoColor=58A6FF)](https://instagram.com/YOUR_INSTAGRAM) <!-- replace -->

@@ -1,0 +1,121 @@
+<svg viewBox="0 0 1200 420" width="1200" height="420" xmlns="http://www.w3.org/2000/svg" fill="none" font-family="'JetBrains Mono','Segoe UI',monospace">
+  <defs>
+    <!-- deep space sky -->
+    <radialGradient id="sky" cx="50%" cy="42%" r="75%">
+      <stop offset="0%" stop-color="#0b1836"/>
+      <stop offset="55%" stop-color="#060c1c"/>
+      <stop offset="100%" stop-color="#02040a"/>
+    </radialGradient>
+    <!-- earth ocean sphere shading -->
+    <radialGradient id="ocean" cx="38%" cy="34%" r="75%">
+      <stop offset="0%"  stop-color="#4aa3ff"/>
+      <stop offset="45%" stop-color="#1f6feb"/>
+      <stop offset="100%" stop-color="#08234f"/>
+    </radialGradient>
+    <radialGradient id="atmos" cx="50%" cy="50%" r="50%">
+      <stop offset="70%" stop-color="#58a6ff" stop-opacity="0"/>
+      <stop offset="90%" stop-color="#58a6ff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#58a6ff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="shoot" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#79c0ff"/>
+      <stop offset="50%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#58a6ff"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="globe"><circle cx="600" cy="238" r="86"/></clipPath>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="420" fill="url(#sky)"/>
+
+  <!-- ===== twinkling stars ===== -->
+  <g fill="#ffffff">
+    <g>
+      <circle cx="90"  cy="70"  r="1.4"/><circle cx="240" cy="120" r="1"/><circle cx="400" cy="60" r="1.6"/>
+      <circle cx="520" cy="140" r="1"/><circle cx="700" cy="90" r="1.3"/><circle cx="860" cy="60" r="1"/>
+      <circle cx="1010" cy="120" r="1.5"/><circle cx="1130" cy="70" r="1"/><circle cx="160" cy="300" r="1.2"/>
+      <circle cx="330" cy="360" r="1"/><circle cx="500" cy="330" r="1.4"/><circle cx="780" cy="350" r="1"/>
+      <circle cx="940" cy="300" r="1.3"/><circle cx="1080" cy="350" r="1.5"/><circle cx="60" cy="200" r="1"/>
+      <animate attributeName="opacity" values="0.25;1;0.25" dur="3s" repeatCount="indefinite"/>
+    </g>
+    <g>
+      <circle cx="150" cy="150" r="1"/><circle cx="300" cy="200" r="1.3"/><circle cx="470" cy="90" r="1"/>
+      <circle cx="650" cy="330" r="1.4"/><circle cx="820" cy="150" r="1"/><circle cx="980" cy="220" r="1.2"/>
+      <circle cx="1120" cy="260" r="1"/><circle cx="220" cy="60" r="1.1"/><circle cx="740" cy="200" r="1"/>
+      <circle cx="380" cy="290" r="1.2"/><circle cx="900" cy="380" r="1"/><circle cx="1050" cy="60" r="1.3"/>
+      <animate attributeName="opacity" values="1;0.2;1" dur="4.5s" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+  <!-- ===== shooting stars ===== -->
+  <g>
+    <g transform="translate(-300,-120)">
+      <line x1="0" y1="0" x2="120" y2="42" stroke="url(#shoot)" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="120" cy="42" r="2.4" fill="#fff"/>
+      <animateTransform attributeName="transform" type="translate"
+        values="-300,-120; 1300,520" dur="4s" begin="0s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.55;0.62;0.9;1" dur="4s" repeatCount="indefinite"/>
+    </g>
+    <g transform="translate(-300,60)">
+      <line x1="0" y1="0" x2="90" y2="30" stroke="url(#shoot)" stroke-width="1.6" stroke-linecap="round"/>
+      <circle cx="90" cy="30" r="1.8" fill="#fff"/>
+      <animateTransform attributeName="transform" type="translate"
+        values="-300,60; 1300,470" dur="6s" begin="2.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.5;0.58;0.9;1" dur="6s" begin="2.2s" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+  <!-- ===== orbit ring + satellite ===== -->
+  <g transform="translate(600,238)">
+    <ellipse rx="150" ry="52" stroke="#1f6feb" stroke-opacity="0.45" stroke-width="1.3" stroke-dasharray="3 6"
+      transform="rotate(-18)"/>
+    <g>
+      <circle r="4" fill="#79c0ff" filter="url(#glow)">
+        <animateMotion dur="9s" repeatCount="indefinite" rotate="auto"
+          path="M150,0 A150,52 0 1,1 -150,0 A150,52 0 1,1 150,0" keyPoints="0;1" keyTimes="0;1" calcMode="linear"/>
+      </circle>
+    </g>
+  </g>
+
+  <!-- ===== EARTH ===== -->
+  <circle cx="600" cy="238" r="104" fill="url(#atmos)"/>
+  <circle cx="600" cy="238" r="86" fill="url(#ocean)"/>
+  <g clip-path="url(#globe)">
+    <!-- scrolling landmasses (two copies for a seamless loop) -->
+    <g fill="#8fd0ff" fill-opacity="0.9">
+      <g>
+        <path d="M540,190 q22,-16 46,-6 q18,8 8,26 q-14,20 -40,14 q-26,-6 -14,-34z"/>
+        <path d="M600,250 q30,-6 44,14 q10,20 -14,28 q-30,8 -42,-14 q-10,-22 12,-28z"/>
+        <path d="M528,268 q20,-4 26,12 q4,18 -18,22 q-22,2 -22,-18 q0,-14 14,-16z"/>
+        <path d="M636,196 q18,-10 30,4 q10,14 -8,22 q-20,8 -28,-8 q-6,-14 6,-18z"/>
+        <animateTransform attributeName="transform" type="translate" from="0,0" to="-172,0" dur="16s" repeatCount="indefinite"/>
+      </g>
+      <g transform="translate(172,0)">
+        <path d="M540,190 q22,-16 46,-6 q18,8 8,26 q-14,20 -40,14 q-26,-6 -14,-34z"/>
+        <path d="M600,250 q30,-6 44,14 q10,20 -14,28 q-30,8 -42,-14 q-10,-22 12,-28z"/>
+        <path d="M528,268 q20,-4 26,12 q4,18 -18,22 q-22,2 -22,-18 q0,-14 14,-16z"/>
+        <path d="M636,196 q18,-10 30,4 q10,14 -8,22 q-20,8 -28,-8 q-6,-14 6,-18z"/>
+        <animateTransform attributeName="transform" type="translate" from="172,0" to="0,0" dur="16s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <!-- day/night terminator shading -->
+    <circle cx="636" cy="212" r="86" fill="#02040a" fill-opacity="0.34"/>
+    <ellipse cx="566" cy="206" rx="26" ry="16" fill="#ffffff" fill-opacity="0.12"/>
+  </g>
+  <circle cx="600" cy="238" r="86" fill="none" stroke="#58a6ff" stroke-opacity="0.6" stroke-width="1"/>
+
+  <!-- ===== title ===== -->
+  <text x="600" y="70" text-anchor="middle" fill="url(#title)" font-size="42" font-weight="700"
+        letter-spacing="6" filter="url(#glow)">AYUSH  TIWARI</text>
+  <text x="600" y="100" text-anchor="middle" fill="#8b949e" font-size="14" letter-spacing="5">
+    F U L L - S T A C K   ·   M O B I L E   ·   ( Atx-3 )
+  </text>
+</svg>
