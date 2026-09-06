@@ -111,7 +111,7 @@ const ayush: Developer = {
 ## 🐍 Watch my contributions get eaten
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Atx-3/Atx-3/output/github-contribution-grid-snake-dark.svg" alt="snake animation"/>
+  <img src="https://raw.githubusercontent.com/Atx-3/Atx-3/output/github-contribution-grid-snake-dark.svg?v=green" alt="snake animation"/>
 </div>
 
 <!--
